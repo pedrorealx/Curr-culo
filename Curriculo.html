@@ -4,19 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu curriculo</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 </head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        list-style: none;
+    }
+    
+        body{
+            width: 100%;
+            background-color:white;
+            color: black;
+            text-align: center;
+            min-height: 100vh;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif ;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+       
+
+        }
+        .container{
+            width: 60%;
+            overflow-y: scroll;
+            height: 90vh;
+            padding: 15% 2px;
+            box-shadow: 0 0 5px #069;
+
+        }
+        .container::-webkit-scrollbar{
+         width: 14px; 
+         border: 1px solid #069 ; 
+        }
+        .container::-webkit-scrollbar-thumb {
+            background-color:#069 ;
+            border-radius: 6px;
+
+        }
+        .hr_dados1{
+            font-size: 1.4em;
+        padding: 0 0.3em;
+        top: -0.1em;
+    
+            
+        }
+        .hr_dados1::after {
+        content: "PEDRO HENRIQUE MOREIRA PIO DA SILVA" ;
+        font-size: 1.4em;
+        padding: 0 0.3em;
+        top: -0.1em;
+        display: inline;
+        position: relative;
+        }
+        .hr_01::after{
+         content: "Obejetivo" ;
+        font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;
+        border-color: #0c09ca;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+
+        }
+        .hr_02::after{
+        content: "Experiências" ;
+        font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+       
+           
+        }
+        .hr_03::after{
+        content: "Formações" ;
+        font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;
+        border-color: #0c09ca;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+        }
+        .hr_04::after{
+            content: "Ferramentas";
+            font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;
+        border-color: #0c09ca;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+           
+        }
+        .hr_05::after{
+            content: "Idiomas";
+            font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;;
+        border-color: #0c09ca;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+         }
+
+        .hr_06::after{
+            content: "Redes Sociais";
+            font-size: 1.4em;
+        padding: 0 0.1em;
+        top: -0.1em;
+        border-color: #0c09ca;
+        display: inline;
+        position: relative;
+        border-radius: 1px;
+    }
+    .font{
+        cursor: pointer;
+        margin: 5px;
+        max-height: 100%;
+        -webkit-transition: all 0;
+        -moz-transform: all 0.3s;
+        transition: all 0.3s;
+
+    }
+    .font:hover{
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        transform: scale(1.5);
+        color: #000;
+    }
+    a i {
+    color: #069;
+    transition: transform 0.3s, color 0.3s;
+}
+
+a:hover i {
+    transform: scale(1.3);
+    color: #33006d;
+}
+.button{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00000080;
+    z-index: 1000;
+}
+    
+
+
+</style>
 <body>
     <div class="container"><br><br>
         <hr class="hr_dados1"><br><br> 
         <img src="img/image.png" alt="" width="250" height="250">
-        <h3>Pedro Henrique</h3>
+        <h3 onclick="mostrarMensagem()" style="cursor: pointer;">Pedro Henrique</h3>
         <h3>Caetes 1, Rua 102, N°75</h3>
         <h3><b>Email:</b>Pedro233245@gmail.com</h3>
-        <h3><b>Telefone:</b>+55 (81)9 8519.6025</h3>
-        <h3>Linkedin: </h3><br>
+        <h3><b>Telefone:</b>+55 (81)9 8519.6025</h3><br>
+
+        <button onclick="alternarTema()" class="button">Alterar Tema</button><br /><br />
+
         <hr class="hr_01"><br>
-        <h3>Objetivo:<br><br>Sou Estudante de Análise e Desenvolvimento de Sistemas no segundo período, em busca do 
+        <h3><br>Sou Estudante de Análise e Desenvolvimento de Sistemas no segundo período, em busca do 
             conhecimentos em programação, banco de dados e desenvolvimento de aplicações web. Estou em 
             busca de experiência com linguagens como Java, JavaScript e SǪL, e busco me familiarizar com 
             ferramentas e frameworks para desenvolvimento ágil e gestão de projetos. Demonstrando 
@@ -24,33 +186,71 @@
             e arquitetura de software. Proativo, com boa capacidade de resolução de problemas e trabalho em 
             equipe, buscando sempre aplicar o aprendizado acadêmico em projetos práticos e desafiadores. </h3><br><br>
             <hr class="hr_02"><br>
-            <h3>Experiências: <br><br> HTML e CSS (Intermediário): Experiência na criação de interfaces web responsivas, com foco em organização, acessibilidade e boas práticas de desenvolvimento. <br><br>
+            <h3><br> HTML e CSS (Intermediário): Experiência na criação de interfaces web responsivas, com foco em organização, acessibilidade e boas práticas de desenvolvimento. <br><br>
 
                 JavaScript (Intermediário): Conhecimento no desenvolvimento de funcionalidades interativas para aplicações web, utilizando lógica de programação eficiente e limpa. <br><br>
                 
                 Java (Básico): Familiaridade com a linguagem orientada a objetos, em constante evolução e prática para aprimoramento das habilidades. <br><br>
                 
-                Banco de Dados - SQL Server: Criação de bancos de dados relacionais com base em modelagem conceitual e lógica, aplicando as estruturas no SQL Server com foco em integridade e desempenho.
-                
+                Banco de Dados - SQL Server: Criação de bancos de dados relacionais com base em modelagem conceitual e lógica, aplicando as estruturas no SQL Server com foco em integridade e desempenho. <br>
+                <br>
                  </h3>
             <hr class="hr_03"><br>
-            <h3>Formações: <br><br> 2019 (FORMADO) |  ESCOLA TÉCNICA PERNANBUCANA DE PAULISTA - PE 
+            <h3><br> 2019 (FORMADO) |  ESCOLA TÉCNICA PERNANBUCANA DE PAULISTA - PE 
                 TÉCNICO EM ELETROTÉCNICA. <br><br> 2024 - (CURSANDO) | FACULDADE CATÓLICA IMACULADA CONCEIÇ ÃO DO RECIFE 
                 ANÁLISE E DESENVOLVIMENTO DE SISTEMAS.</h3>
+                <br>
             <hr class="hr_04"><br>
-            <b>Ferramentas:</b> <br><br>
-            Git, Github, Visual Studio Code, brModelo, Sublime, SQL Server Management Studio, Falcon ++, Intellij Java Community Edition.
+           
+          <ul> <li>Git</li> <li>Github</li> <li>Visual Studio Code</li> <li> brModelo</li> <li>Sublime</li> <li> SQL Server Management Studio</li> <li>Falcon ++</li> <li>Intellij Java Community Edition</li></ul>
+          <br>
             <hr class="hr_05"><br>
-            <b>Idiomas:</b> <br><br>
-            Inglês(básico)
-            <hr class="hr_06"><br>
-            <hr class="hr_07"><br>
-            <hr class="hr_08"><br>
+         
+            <h3>Inglês fluente</h3><ul><li>(básico)</li></ul>
+            <h3>Inglês para Linguagem de programação</h3><ul><li>(Intermediario)</li></ul> <br>
+        
+            <hr class="hr_06"><br> <br>
+                <div class="font"></div>
+                <h3>Compartilhar:</h3><br>
+                <a href="https://www.linkedin.com/in/pedro-realx-338280283/" target="_blank"> 
+                <i class="fa-brands fa-linkedin"  style="font-size: 35px; margin-right: 10px;"></i> </a>
 
-
-
+                <a href="https://github.com/pedrorealx?tab=repositories" target="_blank"> 
+                     <i class="fa-brands fa-github"  style="font-size: 35px;"></i></a>
+              
+                <a href="https://www.instagram.com/pedrorealx/" target="_blank">
+                    <i class="fa-brands fa-instagram"  style="font-size: 35px;"></i></a>
+                
+                <a href="https://api.whatsapp.com/send?phone=5581985196025&text=sua%20mensagem" target="_blank">
+                    <i class="fa-brands fa-whatsapp"  style="font-size: 35px;"></i></a>
+                    
+                
+                
         
     </div>
+    <script>
+        // Mensagem de boas-vindas
+        window.onload = function () {
+          alert("Bem-vindo ao meu currículo online!");
+        };
+    
+        // Altera o tema da página
+        function alternarTema() {
+          const body = document.body;
+          if (body.style.backgroundColor === "black") {
+            body.style.backgroundColor = "white";
+            body.style.color = "black";
+          } else {
+            body.style.backgroundColor = "black";
+            body.style.color = "white";
+          }
+        }
+    
+        // Mensagem ao clicar no nome
+        function mostrarMensagem() {
+          alert("Você clicou no meu nome! Muito obrigado pela visita :)");
+        }
+      </script>
     
 </body>
 </html>
